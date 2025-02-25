@@ -2,6 +2,7 @@ import time
 import logging
 
 logger = logging.getLogger(__name__)
+logger.setLevel('INFO')
 
 def main():
     start_time = time.time()
