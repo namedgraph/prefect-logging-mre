@@ -1,13 +1,18 @@
+import logging
 import prefect
 from prefect import flow
 from logging_mre.main import main  # Import your script as a module
+
+# Configure logging for the specific logger
+extra_logger = logging.getLogger("logging_mre.main")
+extra_logger.setLevel(logging.INFO)
 
 # Define a sub-flow that calls main()
 @flow(name="Sub Flow")
 def sub_flow():
     logger = prefect.get_run_logger()
     logger.info("Calling main() from logging_mre.main as a sub-flow")
-    
+
     # Call the function directly
     main()
 

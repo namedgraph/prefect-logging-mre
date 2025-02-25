@@ -3,7 +3,7 @@
 ```shell
 prefect server start
 prefect worker start --pool "Test pool" --work-queue "default"
-prefect config set PREFECT_LOGGING_EXTRA_LOGGERS=logging_mre
+prefect config set PREFECT_LOGGING_EXTRA_LOGGERS=logging_mre.main
 prefect config set PREFECT_LOGGING_LEVEL=INFO
 poetry run prefect --no-prompt deploy --all --prefect-file ./prefect.yaml
 ```
