@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "logging_mre"
+version = "0.1.0"
+description = "Prefect logging MRE"
+authors = ["Martynas Jusevicius <martynas.jusevicius@beamery.com>"]
+license = "MIT"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.poetry.dependencies]
+python = ">=3.9"
+prefect = "^3.2.7"

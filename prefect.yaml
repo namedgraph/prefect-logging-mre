@@ -1,0 +1,11 @@
+name: prefect
+prefect-version: 3.2.7
+
+definitions:
+  work_pool: &common_work_pool
+    name: "Test pool"
+
+deployments:
+  - name: "Prefect logging MRE"
+    entrypoint: "prefect/entrypoint.py:main_flow"
+    work_pool: *common_work_pool
