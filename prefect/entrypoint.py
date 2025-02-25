@@ -1,10 +1,6 @@
-import logging
 import prefect
 from prefect import flow
 from logging_mre.main import main  # Import your script as a module
-
-extra_logger = logging.getLogger("logging_mre.main")
-extra_logger.setLevel(logging.INFO)
 
 # Define a sub-flow that calls main()
 @flow(name="Sub Flow")
